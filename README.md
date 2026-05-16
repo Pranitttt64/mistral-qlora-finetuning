@@ -150,7 +150,7 @@ All notebooks are designed to run on **Kaggle free-tier** (T4 GPU). To reproduce
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/qlora-news-summarization.git
+git clone https://github.com/Pranitttt64/mistral-qlora-finetuning
 cd qlora-news-summarization
 ```
 

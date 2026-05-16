@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data & Model weights (too large for GitHub)
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+checkpoint_backup/
+checkpoints/
+model/
+cache/
+
+# Large CSVs (keep small ones)
+finetuned_predictions.csv
+
+# Environment
+.env
+.venv
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

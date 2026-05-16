@@ -1,0 +1,71 @@
+{
+  "project": "QLoRA Fine-Tuning vs Prompt Engineering",
+  "dataset": "CNN/DailyMail (cnn_dailymail, 3.0.0)",
+  "base_model": "mistralai/Mistral-7B-v0.1",
+  "test_samples": 1000,
+  "rouge_scores": {
+    "rouge1": {
+      "Zero-Shot": 0.1644984803755616,
+      "Few-Shot": 0.1648973290064954,
+      "Optimized Prompt": 0.1484046563557713,
+      "QLoRA Fine-tuned": 0.1878671303277522
+    },
+    "rouge2": {
+      "Zero-Shot": 0.036728105417781,
+      "Few-Shot": 0.0166566906690903,
+      "Optimized Prompt": 0.0328899901098105,
+      "QLoRA Fine-tuned": 0.0419657485562206
+    },
+    "rougeL": {
+      "Zero-Shot": 0.1087900050497605,
+      "Few-Shot": 0.1044646977432103,
+      "Optimized Prompt": 0.1017348891131305,
+      "QLoRA Fine-tuned": 0.1187665772256457
+    }
+  },
+  "statistical_tests": {
+    "Few-Shot vs Zero-Shot": {
+      "t_statistic": 0.084,
+      "p_value": 0.933082,
+      "significant": false
+    },
+    "Optimized Prompt vs Zero-Shot": {
+      "t_statistic": -3.8873,
+      "p_value": 0.000108,
+      "significant": true
+    },
+    "QLoRA Fine-tuned vs Zero-Shot": {
+      "t_statistic": 8.6177,
+      "p_value": 0.0,
+      "significant": true
+    }
+  },
+  "length_analysis": {
+    "Reference": {
+      "mean": 51.1,
+      "std": 16.25
+    },
+    "Zero-Shot": {
+      "mean": 51.62,
+      "std": 37.63
+    },
+    "Few-Shot": {
+      "mean": 61.06,
+      "std": 26.51
+    },
+    "Optimized Prompt": {
+      "mean": 41.65,
+      "std": 34.02
+    },
+    "QLoRA Fine-tuned": {
+      "mean": 66.75,
+      "std": 36.38
+    }
+  },
+  "best_method_rouge1": "QLoRA Fine-tuned",
+  "best_rouge1": 0.1878671303277522,
+  "finetuning_improvement_over_zero_shot": {
+    "rouge1": 0.023368649952190595,
+    "rouge2": 0.0052376431384396
+  }
+}

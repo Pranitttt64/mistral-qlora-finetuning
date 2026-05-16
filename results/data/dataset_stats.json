@@ -1,0 +1,29 @@
+{
+  "dataset": "cnn_dailymail",
+  "model_id": "mistralai/Mistral-7B-v0.1",
+  "splits": {
+    "train": {
+      "size": 8000,
+      "avg_input_words": 341.607625,
+      "avg_output_words": 47.20725
+    },
+    "validation": {
+      "size": 1000,
+      "avg_input_words": 343.183,
+      "avg_output_words": 52.819
+    },
+    "test": {
+      "size": 1000,
+      "avg_input_words": 343.143,
+      "avg_output_words": 51.095
+    }
+  },
+  "config": {
+    "max_input_tokens": 512,
+    "max_output_tokens": 128,
+    "max_doc_tokens": 1024,
+    "train_samples": 8000,
+    "val_samples": 1000,
+    "test_samples": 1000
+  }
+}

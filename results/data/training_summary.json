@@ -1,0 +1,25 @@
+{
+  "model": "mistralai/Mistral-7B-v0.1",
+  "training_date": "2026-05-14",
+  "dataset": "cnn_dailymail",
+  "epochs": 3,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "effective_batch": 16,
+  "learning_rate": 0.0002,
+  "max_input_length": 512,
+  "lora_r": 8,
+  "lora_alpha": 16,
+  "lora_targets": [
+    "q_proj",
+    "v_proj"
+  ],
+  "train_samples": 8000,
+  "test_samples": 1000,
+  "rouge_scores": {
+    "rouge1": 0.1878671303277522,
+    "rouge2": 0.04196574855622065,
+    "rougeL": 0.1187665772256457,
+    "rougeLsum": 0.15623820147416884
+  }
+}
